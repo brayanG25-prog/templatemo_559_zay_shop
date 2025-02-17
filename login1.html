@@ -5,12 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
+    <link rel="apple-touch-icon" href="assets/img2/bdv.png" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/favicon.ico"
-    />
+      href="assets/img2/bdv.png"    />
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/templatemo.css" />
@@ -119,7 +118,7 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
                 <a class="nav-link" href="about.html">Acerca</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="shop.html">Inicio de sesion</a>
+                <a class="nav-link" href="login1.html">Inicio de sesion</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contacto</a>
@@ -184,17 +183,56 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
         <section>
           <main>
             <h1>Iniciar Sesión</h1>
-            <form id="loginForm" action="process_login.php" method="POST">
+            <form id="loginForm" onsubmit="validateLogin(event)">
               <label for="username">Usuario:</label>
               <input type="text" id="username" name="username" required />
-    
+        
               <label for="password">Contraseña:</label>
               <input type="password" id="password" name="password" required />
-    
+        
               <button type="submit">Iniciar Sesión</button>
             </form>
           </main>
         </section>
+        
+        <div id="cedulaSection" style="display: none;">
+          <h2>Validar Cédula</h2>
+          <form id="cedulaForm" onsubmit="validateCedula(event)">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required />
+        
+            <button type="submit">Validar Cédula</button>
+          </form>
+        </div>
+        
+        <script>
+          function validateLogin(event) {
+            event.preventDefault();
+        
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            if (username === 'admin' && password === '12345678') {
+              document.getElementById('loginForm').style.display = 'none';
+              document.getElementById('cedulaSection').style.display = 'block';
+            } else {
+              alert('Usuario o contraseña incorrectos');
+            }
+          }
+        
+          function validateCedula(event) {
+            event.preventDefault();
+        
+            const cedula = document.getElementById('cedula').value;
+        
+            if (cedula === '123456789') {
+              window.location.href = 'bd.html';
+            } else {
+              alert('Cédula incorrecta');
+            }
+          }
+        </script>
+        
       </div>
     </div>
     <!-- End Content -->
