@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Inisio de sesion</title>
+    <title>Inicio de sesión</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -21,13 +21,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
     />
     <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
-    <!--
-    
-TemplateMo 559 Banco de Venezuela Shop
-
-https://templatemo.com/tm-559-Banco de Venezuela-shop
-
--->
   </head>
 
   <body>
@@ -115,14 +108,13 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
                 <a class="nav-link" href="about.html">Acerca</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login1.html">Inicio de sesion</a>
+                <a class="nav-link" href="login1.html">Inicio de sesión</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contacto</a>
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </nav>
@@ -192,13 +184,13 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
           </main>
         </section>
         
-        <div id="cedulaSection" style="display: none;">
-          <h2>Validar Cédula</h2>
-          <form id="cedulaForm" onsubmit="validateCedula(event)">
-            <label for="cedula">Cédula:</label>
-            <input type="text" id="cedula" name="cedula" required />
+        <div id="rifSection" style="display: none;">
+          <h2>Validar RIF</h2>
+          <form id="rifForm" onsubmit="validateRIF(event)">
+            <label for="rif">RIF:</label>
+            <input type="text" id="rif" name="rif" required />
         
-            <button type="submit">Validar Cédula</button>
+            <button type="submit">Validar RIF</button>
           </form>
         </div>
         
@@ -211,21 +203,21 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
         
             if (username === 'admin' && password === '12345678') {
               document.getElementById('loginForm').style.display = 'none';
-              document.getElementById('cedulaSection').style.display = 'block';
+              document.getElementById('rifSection').style.display = 'block';
             } else {
               alert('Usuario o contraseña incorrectos');
             }
           }
         
-          function validateCedula(event) {
+          function validateRIF(event) {
             event.preventDefault();
         
-            const cedula = document.getElementById('cedula').value;
+            const rif = document.getElementById('rif').value;
         
-            if (cedula === '123456789') {
+            if (rif === 'J123456789') {
               window.location.href = 'bd.html';
             } else {
-              alert('Cédula incorrecta');
+              alert('RIF incorrecto');
             }
           }
         </script>
@@ -233,7 +225,6 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
       </div>
     </div>
     <!-- End Content -->
-
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
@@ -263,72 +254,69 @@ https://templatemo.com/tm-559-Banco de Venezuela-shop
             </ul>
           </div>
 
-
-
-
-        <div class="row text-light mb-4">
-          <div class="col-12 mb-3">
-            <div class="w-100 my-3 border-top border-light"></div>
-          </div>
-          <div class="col-auto me-auto">
-            <ul class="list-inline text-left footer-icons">
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjBuLqYj8KLAxVeTDABHUA1LNcQFnoECBQQAQ&url=https%3A%2F%2Fwww.facebook.com%2FBancodeVenezuelaOficial%2F%3Flocale%3Des_LA&usg=AOvVaw3qUiUQIZ9pessnKuMQGOUV&opi=89978449"
-                  ><i class="fab fa-facebook-f fa-lg fa-fw"></i
-                ></a>
-              </li>
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjGypSej8KLAxU8SzABHRK9NM8QFnoECAoQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fbcv.org.ve%2F%3Fhl%3Des-la&usg=AOvVaw1cWtMgRBx3sLP0oLTc_6FT&opi=89978449/"
-                  ><i class="fab fa-instagram fa-lg fa-fw"></i
-                ></a>
-              </li>
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjOlb2jj8KLAxVUSzABHej4HI4QFnoECBkQAQ&url=https%3A%2F%2Fx.com%2Fbcodevenezuela%3Flang%3Des&usg=AOvVaw34_mT_DhmrTTNI1z7hSpit&opi=89978449/"
-                  ><i class="fab fa-twitter fa-lg fa-fw"></i
-                ></a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="col-auto">
-            <label class="sr-only" for="subscribeEmail">Email </label>
-            <div class="input-group mb-2">
-              <input
-                type="text"
-                class="form-control bg-dark border-light"
-                id="subscribeEmail"
-                placeholder="Correo Electronico"
-              />
-              <div class="input-group-text btn-success text-light">
-                Suscribirse
+          <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+              <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+              <ul class="list-inline text-left footer-icons">
+                <li
+                  class="list-inline-item border border-light rounded-circle text-center"
+                >
+                  <a
+                    class="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://www.facebook.com/BancodeVenezuelaOficial/"
+                    ><i class="fab fa-facebook-f fa-lg fa-fw"></i
+                  ></a>
+                </li>
+                <li
+                  class="list-inline-item border border-light rounded-circle text-center"
+                >
+                  <a
+                    class="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://www.instagram.com/bcv.org.ve/?hl=es-la"
+                    ><i class="fab fa-instagram fa-lg fa-fw"></i
+                  ></a>
+                </li>
+                <li
+                  class="list-inline-item border border-light rounded-circle text-center"
+                >
+                  <a
+                    class="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://twitter.com/BcodeVenezuela?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    ><i class="fab fa-twitter fa-lg fa-fw"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="subscribeEmail">Email </label>
+              <div class="input-group mb-2">
+                <input
+                  type="text"
+                  class="form-control bg-dark border-light"
+                  id="subscribeEmail"
+                  placeholder="Correo Electrónico"
+                />
+                <div class="input-group-text btn-success text-light">
+                  Suscribirse
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="w-100 bg-black py-3">
-        <div class="container">
-          <div class="row pt-2">
-            <div class="col-12">
-              <p class="text-left text-light">
-                Av. Universidad, esquina Sociedad, Edificio Banco de Venezuela, Caracas, Distrito Capital.© Banco de Venezuela, S.A. Banco Universal © RIF G-20009997-6. Todos los derechos reservados.
-              </p>
+        <div class="w-100 bg-black py-3">
+          <div class="container">
+            <div class="row pt-2">
+              <div class="col-12">
+                <p class="text-left text-light">
+                  Av. Universidad, esquina Sociedad, Edificio Banco de Venezuela, Caracas, Distrito Capital.© Banco de Venezuela, S.A. Banco Universal © RIF G-20009997-6. Todos los derechos reservados.
+                </p>
+              </div>
             </div>
           </div>
         </div>
